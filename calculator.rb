@@ -9,7 +9,7 @@ say ("Whats the first number that you want to use: ")
 num1 = gets.chomp
 say ("What is the second number that you want to use:")
 num2 = gets.chomp
-say ("What is the operation that you wish to perform, 1) add, 2) sub, 3) mult,  4) div")
+say ("What is the operation that you wish to perform, 1) add, 2) sub, 3) mult,  4) div, 5) sqr")
 choice = gets.chomp
 
 
@@ -48,6 +48,15 @@ def divide(a,b)
 
 end
 
+def power(a,b)
+  i = 0
+ while i < b
+  power = a * a
+  i+=1
+ end 
+
+end
+
 while choice.to_i > 5 || choice.to_i < 1
 puts "You did not enter the right value! Please enter it again"
 choice = gets.chomp
@@ -64,6 +73,8 @@ case  choice
   	     mulitply(num1, num2)
        when "4"
   	     divide(num1,num2)
+  	   when "5"
+  	     power(num1,num2) 
       else
 
      	puts "You have not entered a valid choice!"
